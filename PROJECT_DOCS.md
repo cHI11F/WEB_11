@@ -1,39 +1,39 @@
-# C1FIT — Premium Fitness Club & Membership Management System.
+# C1FIT — CRM-система управління фітнес-клубом та підписками користувачів
 
-**Live URL:** [https://web-11-iota.vercel.app/](https://web-11-iota.vercel.app/)
+**Посилання на сайт (Live URL):** [https://web-11-iota.vercel.app/](https://web-11-iota.vercel.app/)
 
-## 1. Title & Overview
+## 1. Назва та огляд проєкту
 
-### Core Features:
-- **Membership Plan Management:** Seamless package upgrades and switches.
-- **Workout Logging & Tracking:** CRUD operations: Log, Edit, and Delete workouts.
-- **Class Booking & Cancellations:** Smooth booking system with instant error-free cancellation backend handling.
-- **Role-Based Dynamic Dashboards:** Dedicated portal spaces for Members, Trainers, and Admins.
-- **Modern Light Glassmorphism Responsive UI:** Premium, aesthetically polished interface across all devices.
+### Ключові функції системи:
+- **Управління планами підписок (Memberships):** Безпроблемна зміна, оновлення та перехід між доступними пакетами послуг клубу.
+- **Логування та відстеження тренувань:** Повний цикл CRUD-операцій (створення, перегляд, редагування та видалення записів про виконані тренування).
+- **Бронювання та скасування занять:** Зручна система запису на групові чи індивідуальні класи з миттєвою обробкою скасувань на бекенді без збоїв.
+- **Динамічні панелі керування (Dashboards):** Розділені персоналізовані кабінети з унікальним функціоналом для Користувачів (Клієнтів), Тренерів та Адміністраторів.
+- **Сучасний інтерфейс у стилі Light Glassmorphism:** Преміальний, мінімалістичний та адаптивний дизайн, що ідеально відображається на будь-яких пристроях (ПК, планшети, смартфони).
 
 ---
 
-## 2. Authentication & Role Access (Авторизація)
+## 2. Авторизація та рівні доступу
 
-**Auth Pages:** 
-- `/login`
-- `/register`
+**Сторінки авторизації:** 
+- `/login` (Вхід)
+- `/register` (Реєстрація)
 
-*Secure session handling is implemented using JWTs securely passed between the client and the Express backend.*
+*Для захисту сесій користувачів та безпечного обміну даними між клієнтською частиною та Express-бекендом використовуються JWT-токени.*
 
-### Roles & Privileges
+### Ролі та права доступу в системі
 
-| Role | Privileges |
+| Роля | Права доступу в системі |
 | :--- | :--- |
-| **Admin** | Full system command. Has team and management control, oversees all classes, users, and global metrics. |
-| **Trainer** | Manages personal class schedules and views trainee/client progression. |
-| **Member** | Books classes, logs personal workouts, and manages active subscription tiers. |
+| **Admin (Адміністратор)** | Повний контроль над системою. Керує командою, користувачами, розкладом усіх занять, а також бачить глобальні метрики клубу. |
+| **Trainer (Тренер)** | Керує власним розкладом занять, переглядає списки записаних клієнтів та відстежує їхній прогрес. |
+| **Member (Клієнт / Учасник)** | Бронює тренування, веде особистий щоденник активностей (логує тренування) та керує своїм планом підписки. |
 
-### Demo Credentials
+### Демонстраційні дані для входу (Тестові акаунти)
 
-*Use these credentials to instantly log in and test the respective role functionalities.*
+*Використовуйте ці дані для миттєвого входу на сайт та перевірки функціоналу кожної окремої ролі під час перевірки викладачем.*
 
-| Role | Email | Password |
+| Роля | Електронна пошта (Email) | Пароль (Password) |
 | :--- | :--- | :--- |
 | **Admin** | `admin@fitness.com` | `password123` |
 | **Trainer** | `jane@fitness.com` | `password123` |
@@ -41,38 +41,38 @@
 
 ---
 
-## 3. Application Pages & Routes (Сторінки проекту)
+## 3. Сторінки проєкту та маршрути (Routes)
 
-Below is the ordered list of every primary page/route present in the frontend architecture.
+Нижче наведено структурований список усіх основних сторінок та маршрутів, реалізованих у фронтенд-архітектурі додатка.
 
-1. **Home Page (Landing)** — `/`
-   - **Description:** Hero section with call-to-actions, centralized modern grid view of fitness modules.
-   - ![Home Page](./screenshots/home.png)
+1. **Головна сторінка (Landing Page)** — `/`
+   - **Опис:** Головний екран (Hero section) із чіткими кнопками заклику до дії (CTA) та централізованою сучасною сіткою фітнес-модулів клубу.
+   - ![Головна сторінка](./screenshots/home.png)
 
-2. **Login / Register** — `/login` and `/register`
-   - **Description:** Clean, centered responsive forms with premium validation indicators.
-   - ![Login / Register](./screenshots/login.png)
+2. **Вхід / Реєстрація (Login / Register)** — `/login` та `/register`
+   - **Опис:** Очищені від зайвого, вирівняні по центру адаптивні форми з преміальними візуальними індикаторами валідації полів.
+   - ![Вхід / Реєстрація](./screenshots/login.png)
 
-3. **Classes** — `/classes`
-   - **Description:** Symmetrical centered grid layout showing upcoming personal and group training sessions.
-   - ![Classes](./screenshots/classes.png)
+3. **Заняття (Classes)** — `/classes`
+   - **Опис:** Симетрична відцентрована сітка (Grid layout), яка відображає список усіх майбутніх групових та індивідуальних тренувань клубу.
+   - ![Заняття](./screenshots/classes.png)
 
-4. **Memberships** — `/memberships`
-   - **Description:** Centered grid array displaying subscription pricing tiers and plan details.
-   - ![Memberships](./screenshots/memberships.png)
+4. **Підписки (Memberships)** — `/memberships`
+   - **Опис:** Зручні картки тарифних планів, що демонструють рівні підписок, ціни та детальний перелік послуг, які входять у кожен пакет.
+   - ![Підписки](./screenshots/memberships.png)
 
-5. **Member Dashboard** — `/dashboard`
-   - **Description:** Personal client space for scheduling, active plans tracker, and workout logs.
-   - ![Member Dashboard](./screenshots/member-dashboard.png)
+5. **Кабінет Клієнта (Member Dashboard)** — `/dashboard`
+   - **Опис:** Персональний простір користувача для перегляду розкладу занять, відстеження статусу поточної підписки та ведення логів тренувань.
+   - ![Кабінет Клієнта](./screenshots/member-dashboard.png)
 
-6. **Trainer Dashboard** — `/trainer`
-   - **Description:** Specialized workspace for managing personal trainee rosters and group tracking metrics.
-   - ![Trainer Dashboard](./screenshots/trainer-dashboard.png)
+6. **Кабінет Тренера (Trainer Dashboard)** — `/trainer`
+   - **Опис:** Спеціалізоване робоче середовище для тренера, де відображається його поточний графік та списки клієнтів, які записалися на заняття.
+   - ![Кабінет Тренера](./screenshots/trainer-dashboard.png)
 
-7. **Admin Dashboard** — `/admin`
-   - **Description:** Global command center with pill-navigation tabs, user directory table, system metrics widgets, and record mutations.
-   - ![Admin Dashboard](./screenshots/admin-dashboard.png)
+7. **Панель Адміністратора (Admin Dashboard)** — `/admin`
+   - **Опис:** Глобальний командний центр системи із сучасною навігацією у вигляді пігулок-вкладок, таблицями користувачів, віджетами системних метрик та можливістю редагування/видалення записів.
+   - ![Панель Адміністратора](./screenshots/admin-dashboard.png)
 
-8. **Profile Settings** — `/profile`
-   - **Description:** User identity configuration page for personal details updating *(Note: Future roadmap integration)*.
-   - ![Profile Settings](./screenshots/profile.png)
+8. **Налаштування профілю (Profile Settings)** — `/profile`
+   - **Опис:** Сторінка користувача для оновлення персональних даних, імені та контактів *(Примітка: Заплановано в майбутніх інтеграціях карти розвитку проєкту)*.
+   - ![Налаштування профілю](./screenshots/profile.png)
