@@ -1,6 +1,6 @@
 # C1FIT — CRM-система управління фітнес-клубом та підписками користувачів
 
-**Посилання на сайт (Live URL):** [https://web-11-iota.vercel.app/](https://web-11-iota.vercel.app/)
+**Посилання на сайт (Live URL):** [[https://web-11-iota.vercel.app/](https://web-11-iota.vercel.app/)](https://lab-10-alpha.vercel.app/admin)
 
 ## 1. Назва та огляд проєкту
 
